@@ -2,6 +2,6 @@ This program uses the following ITK class: https://itk.org/Doxygen/html/classitk
 
 Build with cmake
 
-Usage: ./NoiseImageFilter <Input File> < Output File> [Mean] [Standard Deviation]
+Usage: ./NoiseImageFilter < Input File > < Output File > [ Mean ]  [ Standard Deviation ]
 
 
