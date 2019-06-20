@@ -1,7 +1,7 @@
 #include "itkImage.h"
 #include "itkImageFileReader.h"
 #include "itkImageFileWriter.h"
-#include "itkAdditiveGaussianNoiseImageFilter.h" // class demonstrated by this program
+#include "itkAdditiveGaussianNoiseImageFilter.h"
 
 int main( int argc, char* argv[] )
 {
@@ -34,7 +34,7 @@ int main( int argc, char* argv[] )
   using ImageType = itk::Image< PixelType, Dimension >;
 
   // Create the filter and apply the algorithm to the image
-  using FilterType = itk::AdditiveGaussianNoiseImageFilter< ImageType, ImageType >;
+  using FilterType = itk::AdditiveGaussianNoiseImageFilter< ImageType >;
   FilterType::Pointer filter = FilterType::New();
   filter->SetInput( reader->GetOutput() );
   filter->SetMean( mean ); // set the mean
@@ -46,7 +46,7 @@ int main( int argc, char* argv[] )
   writer->SetFileName( outputImage );
   writer->SetInput( filter->GetOutput() );
 
-//Write the output image and catch error
+//Write the output image
   try
     {
     writer->Update();
