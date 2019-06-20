@@ -13,12 +13,12 @@ endforeach()
 
 
 # This project is designed to be built outside the Insight source tree.
-project(NoiseImageFilter)
+project(AdditiveGaussianNoiseImageFilter)
 
 # Find ITK.
 find_package(ITK REQUIRED)
 include(${ITK_USE_FILE})
 
-add_executable(NoiseImageFilter NoiseImageFilter.cxx )
+add_executable(AdditiveGaussianNoiseImageFilter AdditiveGaussianNoiseImageFilter.cxx )
 
-target_link_libraries(NoiseImageFilter ${ITK_LIBRARIES})
+target_link_libraries(AdditiveGaussianNoiseImageFilter ${ITK_LIBRARIES})

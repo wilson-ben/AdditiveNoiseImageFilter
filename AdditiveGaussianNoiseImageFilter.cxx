@@ -10,7 +10,7 @@ int main( int argc, char* argv[] )
     {
     std::cerr << "Usage: "<< std::endl;
     std::cerr << argv[0];
-    std::cerr << "<InputFileName> <OutputFileName> [Mean] [Standard Deviation]";
+    std::cerr << " <InputFileName> <OutputFileName> [Mean] [Standard Deviation]";
     std::cerr << std::endl;
     return EXIT_FAILURE;
     }
